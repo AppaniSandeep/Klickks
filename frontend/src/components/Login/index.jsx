@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import cookies from 'js-cookie';
+
 
 const Login = () => {
 
@@ -27,7 +27,7 @@ const Login = () => {
                 const data = await response.json();
                 console.log('Login successful');
                 console.log(data)
-                navigate('/home');
+                navigate('/');
             } else {
                 const errorData = await response.json();
                 console.error('Login error:', errorData);
